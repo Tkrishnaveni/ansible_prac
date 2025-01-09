@@ -2,7 +2,7 @@
   hosts: web
   tasks:
    - name: task1
-     ansible.builtin.in.debug:
+     ansible.builtin.debug:
        msg: "hello from play1 and task1"
 
 - name: play2
