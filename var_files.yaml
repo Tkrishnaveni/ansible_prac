@@ -5,8 +5,8 @@
   tasks:
    - name: print var1 from file
      ansible.builtin.debug:
-     msg: "this is {{course}} course"
+       msg: "this is {{course}} course"
 
    - name: print var2 from file
      ansible.builtin.debug:
-     msg: "{{course}} course duration is : {{duration}}"  
+       msg: "{{course}} course duration is : {{duration}}"  
