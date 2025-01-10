@@ -1,0 +1,9 @@
+- name: task level vars
+  hosts: web
+  tasks:
+   - name: print tasklevel vars
+     vars:
+       course: Devsecops
+       learner: krishnaveni
+     ansible.builtin.debug:
+      msg: "{{learner}} doing {{course}}"   
