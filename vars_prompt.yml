@@ -1,5 +1,5 @@
 - name: variables from command line
-  host: web
+  hosts: web
   vars_prompt:
    - name: course
      prompt: enter course name
