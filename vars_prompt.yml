@@ -13,5 +13,5 @@
    
   tasks: 
    - name: prinnt course information
-      ansible.builtin.debug:
-         msg: "course is :{{course}} , duration: {{duration}} , student: {{student}}
+     ansible.builtin.debug:
+        msg: "course is :{{course}} , duration: {{duration}} , student: {{student}}
