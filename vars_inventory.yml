@@ -1,7 +1,7 @@
 - name: vars from inventory file
   hosts: local
   connection: local
-  task:
+  tasks:
    - name: print vars from inventory files
      ansible.builtin.debug:
       msg: "course is :{{course}} , duration= {{duration}} , student:{{student}} "
