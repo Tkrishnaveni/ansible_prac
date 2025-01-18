@@ -11,6 +11,7 @@
    - name: student
      prompt: enter student name
    
-  tasks: prinnt course information
-  ansible.debug.builtin:
-    msg: "course is :{{course}} , duration: {{duration}} , student: {{student}}
+  tasks: 
+   - name: prinnt course information
+      ansible.builtin.debug:
+         msg: "course is :{{course}} , duration: {{duration}} , student: {{student}}
