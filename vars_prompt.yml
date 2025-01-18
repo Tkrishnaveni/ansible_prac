@@ -1,0 +1,16 @@
+- name: variables from command line
+  host: web
+  vars_prompt:
+   - name: course
+     prompt: enter course name
+     private: false
+
+   - name: Duration
+     prompt: enter course duration
+
+   - name: student
+     prompt: enter student name
+   
+  tasks: prinnt course information
+  ansible.debug.builtin:
+    msg: "course is :{{course}} , duration: {{duration}} , student: {{student}}
