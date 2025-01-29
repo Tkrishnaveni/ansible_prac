@@ -1,10 +1,5 @@
-- name: install nginx
+- name: delete {{ pack1}}
   ansible.builtin.package:
-   name: nginx
-   state: installed
+   name: {{ pack1 }}
+   state: absent
 
-- name: start nginx
-  ansible.builtin.service:
-   name: nginx
-   state: started  
-   enabled: yes
