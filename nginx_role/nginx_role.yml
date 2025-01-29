@@ -2,5 +2,5 @@
   hosts: local
   become: yes
   connection: local
-  roles:
+  role:
   - nginx
