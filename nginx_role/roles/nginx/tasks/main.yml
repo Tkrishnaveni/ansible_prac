@@ -1,5 +1,5 @@
-- name: delete {{ pack1}}
-  ansible.builtin.package:
+- name: install {{ pack1}}
+  ansible.builtin.dnf
    name: "{{ pack1 }}"
-   state: absent
+   state: installed
 
