@@ -1,6 +1,6 @@
 - name: nginx installation through role
   hosts: local
-  become: yes
   connection: local
+  become: true
   roles:
   - nginx
