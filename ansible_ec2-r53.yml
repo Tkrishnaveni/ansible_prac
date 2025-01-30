@@ -17,6 +17,7 @@
     - name: Install AWS Python libraries
       ansible.builtin.pip:
        name: "{{ item }}"
+       state: installed
        executable: pip3.9
       loop:
       - boto3
