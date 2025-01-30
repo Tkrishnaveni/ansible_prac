@@ -2,15 +2,22 @@
   hosts: local
   become: true
   connection: local
+  vars:
+   subnet_id: ssubnet-0c15405f633ef6962
+   sg_id:  sg-00397bd41905b6fbf
+   instance_type: t3.micro
+   ami_id: ami-09c813fb71547fc4f
+   instance:
+   - mysql
+   - frontend
+   - backend
   tasks:
   - name: create ec2 instances
     amazon.aws.ec2_instance:
       name: "{{ item }}"
-      instance_type: t3.micro
-      ami_id: ami-09c813fb71547fc4f
-      subnet_id: ssubnet-0c15405f633ef6962
-      sg_id: sg-00397bd41905b6fbf
-    loop:
-    - mysql
-    - frontend
-    - backend
+      instance_type: "{{ instance_type }}"
+      ami_id: "{{ ami_id}}"
+      subnet_id: "{{ subnet_id}}"
+      sg_id: "{{ sg_id }}"
+    loop: "{{ instance }}"
+    
