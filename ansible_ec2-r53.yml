@@ -16,6 +16,7 @@
   - name: install python lib
     ansible.builtin.pip:
      name: "{{ item}}"
+     state: present
      execution: pip3.9
     loop:
     - botocore
