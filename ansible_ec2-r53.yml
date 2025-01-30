@@ -21,7 +21,7 @@
   #   loop:
   #   - botocore
   #   - boto3 
-
+  tasks:
   - name: create ec2 instances
     amazon.aws.ec2_instance:
       name: "{{ item }}"
