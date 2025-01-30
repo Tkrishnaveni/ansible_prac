@@ -3,10 +3,10 @@
   become: true
   connection: local
   vars:
-   subnet_id: subnet-090adbff608de6e30
+   subnet_id: subnet-0c15405f633ef6962
    sg_id:  sg-00397bd41905b6fbf
    instance_type: t3.micro
-   ami_id: ami-09c813fb71547fc4f
+   ami_id: ami-0c614dee691cbbf37
    region: us-east-1
    instance:
    - mysql
