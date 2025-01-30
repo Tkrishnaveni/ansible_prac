@@ -5,8 +5,8 @@
   tasks:
   - name: create ec2 instances
     amazon.aws.ec2_instance:
-      name: {{ item }}
-      instance_type: t3.smicro
+      name: "{{ item }}"
+      instance_type: t3.micro
       image_id: ami-09c813fb71547fc4f
       subnet_id: ssubnet-0c15405f633ef6962
       sg_id: sg-00397bd41905b6fbf
