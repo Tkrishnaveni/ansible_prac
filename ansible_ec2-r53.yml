@@ -13,14 +13,14 @@
    - frontend
    - backend
    
-  tasks:
-  - name: install python lib
-    ansible.builtin.pip:
-     name: "{{ item}}"
-     state: present
-    loop:
-    - botocore
-    - boto3 
+  # tasks:
+  # - name: install python lib
+  #   ansible.builtin.pip:
+  #    name: "{{ item}}"
+  #    state: present
+  #   loop:
+  #   - botocore
+  #   - boto3 
 
   - name: create ec2 instances
     amazon.aws.ec2_instance:
